@@ -1,0 +1,25 @@
+{% extends "base.html" %} 
+
+{% block title %}Schedule{% endblock %} 
+
+{% block content %}
+<div class="container">
+    <h2 class="mt-5">Schedule Waste Collection</h2>
+    <form id="scheduleForm" method="post" action="{{ url_for('auth.schedule_collection') }}">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label for="address">Address</label>
+            {{ form.address(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="collection_date">Collection Date</label>
+            {{ form.collection_date(class="form-control") }}
+        </div>
+        <div class="form-group">
+            <label for="collection_time">Collection Time</label>
+            {{ form.collection_time(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Schedule Collection</button>
+    </form>
+</div>
+{% endblock %}
