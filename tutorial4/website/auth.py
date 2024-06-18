@@ -98,8 +98,9 @@ def track_recycling():
         effort = RecyclingEffort(
             user_id=current_user.id,
             date=form.date.data,
-            materials=form.materials.data
-        )
+            materials=form.materials.data,
+            status=form.status.data)
+        
         db.session.add(effort)
         db.session.commit()
         flash('Recycling effort tracked successfully!')
