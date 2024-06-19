@@ -31,5 +31,5 @@ class RecyclingEffort(db.Model):
     date = db.Column(db.DateTime, default=datetime.utcnow)
     materials = db.Column(db.String(500), nullable=False)
     status = db.Column(db.String(50), nullable=False)
-    # def __repr__(self):
-    #     return f'<RecyclingEffort {self.date}>'
+    def __repr__(self):
+         return f'<RecyclingEffort {self.date}>'
