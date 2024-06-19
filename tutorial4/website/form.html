@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling Tracking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ffe6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #f0fff0;
+            border: 1px solid #b2d8b2;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #4caf50;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .form-group .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+        .form-group .radio-group label {
+            margin-right: 20px;
+        }
+        .form-group .radio-group input {
+            margin-top: 2px;
+        }
+        .form-group .radio-group div {
+            display: flex;
+            align-items: center;
+        }
+        .form-group .radio-group div label {
+            margin: 0;
+        }
+        .form-group button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Recycling Tracking Form</h2>
+        <form>
+            <div class="form-group">
+                <label>How often do you recycle?<span>*</span></label>
+                <div class="radio-group">
+                    <div><input type="radio" name="frequency" id="daily" value="Daily"><label for="daily">Daily</label></div>
+                    <div><input type="radio" name="frequency" id="monthly" value="Monthly"><label for="monthly">Monthly</label></div>
+                    <div><input type="radio" name="frequency" id="yearly" value="Yearly"><label for="yearly">Yearly</label></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="plastic">How much plastic do you recycle?<span>*</span></label>
+                <input type="number" id="plastic" name="plastic" step="0.01" placeholder="kg">
+            </div>
+            <div class="form-group">
+                <label for="paper">How much paper do you recycle?<span>*</span></label>
+                <input type="number" id="paper" name="paper" step="0.01" placeholder="kg">
+            </div>
+            <div class="form-group">
+                <label for="hard-materials">How much of the hard materials do you recycle?<span>*</span></label>
+                <input type="number" id="hard-materials" name="hard-materials" step="0.01" placeholder="kg">
+            </div>
+            <div class="form-group">
+                <label>Is it easy to recycle in your town?<span>*</span></label>
+                <div class="radio-group">
+                    <div><input type="radio" name="easy" id="yes" value="Yes"><label for="yes">Yes</label></div>
+                    <div><input type="radio" name="easy" id="no" value="No"><label for="no">No</label></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="improve">Please let us know how you would improve the recycling process:</label>
+                <textarea id="improve" name="improve" placeholder="Your suggestions..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
